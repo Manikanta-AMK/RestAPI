@@ -1,0 +1,12 @@
+{
+      "id": 1,
+      "name": "manikanta",
+      "city": "vijayawada",
+      "designation": "Automation tester",
+      "phonenumber": "1233344",
+      "skills": [
+        "java",
+        "selenium",
+        "maven"
+      ]
+    }

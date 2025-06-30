@@ -1,21 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-11-14T10:47:20 IST" name="Default suite" finished-at="2024-11-14T10:47:23 IST" duration-ms="2894">
+  <suite started-at="2025-03-15T00:40:59 IST" name="Default suite" finished-at="2025-03-15T00:41:05 IST" duration-ms="6778">
     <groups>
     </groups>
-    <test started-at="2024-11-14T10:47:20 IST" name="Default test" finished-at="2024-11-14T10:47:23 IST" duration-ms="2894">
-      <class name="democalls.restassured">
-        <test-method signature="responseapi()[pri:0, instance:democalls.restassured@740cae06]" started-at="2024-11-14T10:47:20 IST" name="responseapi" finished-at="2024-11-14T10:47:23 IST" duration-ms="2610" status="PASS">
+    <test started-at="2025-03-15T00:40:59 IST" name="Default test" finished-at="2025-03-15T00:41:05 IST" duration-ms="6778">
+      <class name="democalls.HTTPrequest">
+        <test-method signature="getusers()[pri:1, instance:democalls.HTTPrequest@cc43f62]" started-at="2025-03-15T00:40:59 IST" name="getusers" finished-at="2025-03-15T00:41:03 IST" duration-ms="4164" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- responseapi -->
-        <test-method signature="test2()[pri:0, instance:democalls.restassured@740cae06]" started-at="2024-11-14T10:47:23 IST" name="test2" finished-at="2024-11-14T10:47:23 IST" duration-ms="211" status="PASS">
+        </test-method> <!-- getusers -->
+        <test-method signature="postuser()[pri:2, instance:democalls.HTTPrequest@cc43f62]" started-at="2025-03-15T00:41:03 IST" name="postuser" finished-at="2025-03-15T00:41:04 IST" duration-ms="1299" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test2 -->
-      </class> <!-- democalls.restassured -->
+        </test-method> <!-- postuser -->
+        <test-method signature="updateuser()[pri:3, instance:democalls.HTTPrequest@cc43f62]" started-at="2025-03-15T00:41:04 IST" name="updateuser" finished-at="2025-03-15T00:41:05 IST" duration-ms="646" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateuser -->
+        <test-method signature="deleteuser()[pri:0, instance:democalls.HTTPrequest@cc43f62]" started-at="2025-03-15T00:41:05 IST" name="deleteuser" finished-at="2025-03-15T00:41:05 IST" depends-on-methods="democalls.HTTPrequest.updateuser" duration-ms="581" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteuser -->
+      </class> <!-- democalls.HTTPrequest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

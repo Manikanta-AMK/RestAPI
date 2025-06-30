@@ -30,7 +30,7 @@ public class HTTPrequest {
 	public static void postuser() {
 		newdata = new HashMap();
 		newdata.put("role", "sdet");
-		newdata.put("company", "IBM");
+		newdata.put("company", "IBM"); 
 
 		response = given().contentType("application/json").body(newdata).when()
 				.post("https://reqres.in/api/users");

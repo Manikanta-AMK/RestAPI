@@ -5,8 +5,8 @@
     <classes>
       <class name="HttpMethods.Requests">
         <methods>
-          <include name="createRequest"/>
-          <include name="updateRequest"/>
+          <include name="getRequest2"/>
+          <include name="deleteRequest"/>
         </methods>
       </class> <!-- HttpMethods.Requests -->
     </classes>

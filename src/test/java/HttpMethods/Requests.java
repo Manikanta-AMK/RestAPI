@@ -18,6 +18,7 @@ public class Requests {
 	 String URL = "https://jsonplaceholder.typicode.com";
 	 
 	// get request
+	 
 	@Test(priority=1, enabled=true)
 	public void getRequest()
 	{
@@ -36,6 +37,8 @@ public class Requests {
 				Assert.fail("testcases failed: "+ e.getMessage());
 		}
 	}
+	
+	// create request 
 	
 	@Test(priority=2, enabled=true)
 	public void createRequest() {
@@ -64,6 +67,8 @@ public class Requests {
 	    }
 	}
 	
+	//update request
+	
 	@Test(priority=3, enabled=true, dependsOnMethods= {"createRequest"} )
 	public void updateRequest()
 	{
@@ -89,17 +94,20 @@ public class Requests {
 		}
 	}
 
+	//delete request
+	
 	@Test(priority=4, enabled=true)
 	public void deleteRequest()
 	{
 	    try {
 	       
 	        given()
-	            .baseUri(URL)
 	        .when()
-	            .delete("/posts/"+userid)
+	            .delete(URL+"/posts/"+userid)
 	        .then()
-	            .statusCode(200)   // correct for JSONPlaceholder
+	            .statusCode(204)   // correct for JSONPlaceholder
+	            .time(lessThan(2000L))
+	            .body(emptyOrNullString())
 	            .log().all()
 	            .log().body();
 	        
@@ -107,6 +115,25 @@ public class Requests {
 	    catch(Exception e) {
 	        Assert.fail("testcase failed: "+e.getMessage());
 	    }
+	}
+	
+	@Test(priority=5, enabled=true)
+	public void getRequest2()
+	{
+		try {
+		given()
+		.when()
+			.get(URL+"/posts/1/"+userid)
+		.then()
+			.statusCode(200)
+//			.body(containsString("title"))
+			.header("content-type", equalTo("application/json; charset=utf-8"))
+			.time(lessThan(2000L))
+		.log().all();
+		}
+		catch (Exception e) {
+				Assert.fail("testcases failed: "+ e.getMessage());
+		}
 	}
 
 }

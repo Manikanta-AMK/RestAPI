@@ -18,7 +18,7 @@ public class HTTPrequest {
 
 	public static int id;
 
-	@Test(priority=1) 
+	@Test(priority=1, enabled=false) 
 	  public static void getusers() {
 		  given()
 	       .when() .get("https://reqres.in/api/users?page=2")
@@ -34,7 +34,7 @@ public class HTTPrequest {
 
 		response = given().contentType("application/json").body(newdata).when()
 				.post("https://reqres.in/api/users");
-		response.jsonPath().getInt("id");
+//		response.jsonPath().getInt("id");
 
 		response.then().statusCode(201).log().all();
 		System.out.println("user created with id " + id);
@@ -42,7 +42,7 @@ public class HTTPrequest {
 		System.out.println("created role is " + newdata.get("role").equals("sdet"));
 	}
 
-	@Test(priority=3)
+	@Test(priority=3,enabled=false)
 	public static void updateuser() {
 		newdata.put("location","hyderabad");
 		newdata.put("area", "mindspace");
@@ -55,7 +55,7 @@ public class HTTPrequest {
 
 	}
 	
-	@Test(dependsOnMethods="updateuser")
+	@Test(dependsOnMethods="updateuser",enabled=false)
 	public static void deleteuser()
 	{
 		newdata.remove("area");

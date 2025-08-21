@@ -3,11 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="typesofpostrequest.postRequestwithExternalJsonfile">
+      <class name="HttpMethods.Requests">
         <methods>
-          <include name="externalfile"/>
+          <include name="createRequest"/>
+          <include name="updateRequest"/>
         </methods>
-      </class> <!-- typesofpostrequest.postRequestwithExternalJsonfile -->
+      </class> <!-- HttpMethods.Requests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

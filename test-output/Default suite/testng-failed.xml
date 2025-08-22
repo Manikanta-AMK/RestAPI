@@ -3,13 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="HttpMethods.Requests">
+      <class name="typesofpostrequest.postRequestWithHashMap">
         <methods>
-          <include name="createRequest"/>
-          <include name="updateRequest"/>
+          <include name="hasmap"/>
           <include name="deleteRequest"/>
         </methods>
-      </class> <!-- HttpMethods.Requests -->
+      </class> <!-- typesofpostrequest.postRequestWithHashMap -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

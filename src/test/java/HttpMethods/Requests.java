@@ -52,6 +52,7 @@ public class Requests {
 
 	    	    userid = given()
 	    	        .contentType("application/json")
+//	    	        .contentType("application/json")
 	    	        .body(data)
 	    	    .when()
 	    	        .post(URL)

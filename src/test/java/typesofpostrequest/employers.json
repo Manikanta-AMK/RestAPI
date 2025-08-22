@@ -1,0 +1,279 @@
+{
+  "employers": [
+    {
+      "First Name": "Manikanta",
+      "Last Name": "Arige",
+      "Designation": "Automation engineer",
+      "Experience": "3 years",
+      "Company": "SutherLand",
+      "Age": 27,
+      "Gender": "Male"
+    },
+    {
+      "First Name": "Rajini",
+      "Last Name": "Pulaputuru",
+      "Designation": "Manula Tester",
+      "Experience": "2 years",
+      "Company": "SutherLand",
+      "Age": 24,
+      "Gender": "Female"
+    },
+    {
+      "First Name": "Pavan",
+      "Last Name": "Gubbala",
+      "Designation": "Software Engineer",
+      "Experience": "2 years",
+      "Company": "SutherLand",
+      "Age": 26,
+      "Gender": "Male"
+    },
+    {
+      "First Name": "Venkat",
+      "Last Name": "Masavarapu",
+      "Designation": "Software Engineer",
+      "Experience": "2 years",
+      "Company": "SutherLand",
+      "Age": 26,
+      "Gender": "Male"
+    },
+    {
+      "id": 10,
+      "name": "venom",
+      "lastname": "sannasi",
+      "power": "edo undi",
+      "colour": [
+        "red",
+        "black",
+        "blue"
+      ]
+    },
+    {
+      "name": "venom",
+      "power": "bokka",
+      "lastname": "bgmi",
+      "id": 11
+    },
+    {
+      "coulur": [
+        "balck",
+        "red",
+        "blue"
+      ],
+      "name": "venom",
+      "power": "bokka",
+      "lastname": "bgmi",
+      "id": 12
+    },
+    {
+      "coulur": [
+        "balck",
+        "red",
+        "blue"
+      ],
+      "name": "venom",
+      "power": "bokka",
+      "lastname": "bgmi",
+      "id": 13
+    },
+    {
+      "Firstname": "Manikanta",
+      "Role": "SDET",
+      "Company": "IBM",
+      "Lastname": "Arige",
+      "id": 14
+    },
+    {
+      "coulur": [
+        "balck",
+        "red",
+        "blue"
+      ],
+      "name": "venom",
+      "power": "bokka",
+      "lastname": "bgmi",
+      "id": 15
+    },
+    {
+      "Firstname": "Manikanta",
+      "Role": "SDET",
+      "Company": "IBM",
+      "Lastname": "Arige",
+      "id": 16
+    },
+    {
+      "coulur": [
+        "balck",
+        "red",
+        "blue"
+      ],
+      "name": "venom",
+      "power": "bokka",
+      "lastname": "bgmi",
+      "id": 17
+    },
+    {
+      "game": "bgmi",
+      "royalpass": "yes",
+      "name": "balckbeast",
+      "weapons": [
+        "AKM",
+        "M416",
+        "AUG",
+        "DSR",
+        "M24"
+      ],
+      "id": 18
+    },
+    {
+      "game": "bgmi",
+      "royalpass": "yes",
+      "name": "blackbeast",
+      "weapons": [
+        "AKM",
+        "M416",
+        "AUG",
+        "DSR",
+        "M24"
+      ],
+      "id": 19
+    },
+    {
+      "game": "bgmi",
+      "royalpass": "yes",
+      "name": "blackbeast",
+      "weapons": [
+        "AKM",
+        "M416",
+        "AUG",
+        "DSR",
+        "M24"
+      ],
+      "id": 20
+    },
+    {
+      "game": "bgmi",
+      "royalpass": "yes",
+      "name": "blackbeast",
+      "weapons": [
+        "AKM",
+        "M416",
+        "AUG",
+        "DSR",
+        "M24"
+      ],
+      "id": 21
+    },
+    {
+      "game": "bgmi",
+      "royalpass": "yes",
+      "name": "blackbeast",
+      "weapons": [
+        "AKM",
+        "M416",
+        "AUG",
+        "DSR",
+        "M24"
+      ],
+      "id": 22
+    },
+    {
+      "game": "bgmi",
+      "royalpass": "yes",
+      "name": "blackbeast",
+      "weapons": [
+        "AKM",
+        "M416",
+        "AUG",
+        "DSR",
+        "M24"
+      ],
+      "id": 23
+    },
+    {
+      "Firstname": "Manikanta",
+      "Role": "SDET",
+      "Company": "IBM",
+      "Lastname": "Arige",
+      "id": 24
+    },
+    {
+      "coulur": [
+        "balck",
+        "red",
+        "blue"
+      ],
+      "name": "venom",
+      "power": "bokka",
+      "lastname": "bgmi",
+      "id": 25
+    },
+    {
+      "game": "bgmi",
+      "royalpass": "yes",
+      "name": "blackbeast",
+      "weapons": [
+        "AKM",
+        "M416",
+        "AUG",
+        "DSR",
+        "M24"
+      ],
+      "id": 26
+    },
+    {
+      "name": "AMK54464",
+      "job": "SDET",
+      "id": 27
+    },
+    {
+      "name": "AMK31",
+      "job": "Automation Tester",
+      "id": 28
+    },
+    {
+      "name": "AMK31",
+      "job": "Automation Tester",
+      "id": 29
+    },
+    {
+      "name": "AMK31",
+      "job": "Automation Tester",
+      "id": 30
+    },
+    {
+      "name": "AMK31",
+      "job": "Automation Tester",
+      "id": 31
+    },
+    {
+      "name": "AMK54464",
+      "job": "SDET",
+      "id": 32
+    },
+    {
+      "name": "AMK5446564abcd",
+      "job": "SDET",
+      "id": 33
+    },
+    {
+      "name": "AMK31sd",
+      "job": "Automation Tester",
+      "id": 34
+    },
+    {
+      "name": "AMK4156",
+      "job": "SDET",
+      "id": 35
+    },
+    {
+      "name": "AMK31sd",
+      "job": "Automation Tester",
+      "id": 36
+    },
+    {
+      "name": "AMK4156",
+      "job": "SDET",
+      "id": 38
+    }
+  ]
+}

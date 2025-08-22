@@ -8,6 +8,8 @@ import java.util.HashMap;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import com.sun.tools.sjavac.Log;
+
 import static io.restassured.matcher.RestAssuredMatchers.*;
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 
@@ -15,7 +17,7 @@ public class Requests {
 
 	 int userid;
 	 HashMap<String, String> data;
-	 String URL = "https://jsonplaceholder.typicode.com";
+	 String URL = "http://localhost:3000/employers";
 	 
 	// get request
 	 
@@ -25,13 +27,14 @@ public class Requests {
 		try {
 		given()
 		.when()
-			.get(URL+"/posts")
+			.get(URL)
 		.then()
 			.statusCode(200)
-			.body(containsString("title"))
+			.body(containsString("Designation"))
 			.header("content-type", equalTo("application/json; charset=utf-8"))
 			.time(lessThan(2000L))
 		.log().all();
+		System.out.println("get request is successfull");
 		}
 		catch (Exception e) {
 				Assert.fail("testcases failed: "+ e.getMessage());
@@ -44,23 +47,22 @@ public class Requests {
 	public void createRequest() {
 	    try {
 	    	 data = new HashMap<>();
-	    	    data.put("name", "AMK31");
+	    	    data.put("name", "AMK31sd");
 	    	    data.put("job", "Automation Tester");
 
 	    	    userid = given()
-	    	        .baseUri(URL)
 	    	        .contentType("application/json")
 	    	        .body(data)
 	    	    .when()
-	    	        .post("/posts")
+	    	        .post(URL)
 	    	    .then()
 	    	        .statusCode(201)
-	    	        .body("name", equalTo("AMK31"))
+	    	        .body("name", equalTo("AMK31sd"))
 	    	        .body("job", equalTo("Automation Tester"))
 	    	        .body("id", notNullValue())
 	    	        .log().all()
 	    	        .extract().jsonPath().getInt("id");
-	    	        
+	    	        System.out.println("create request is successfull");
 	    }
 	    catch (Exception e) {
 	        Assert.fail("Test case failed: " + e.getMessage());
@@ -74,20 +76,20 @@ public class Requests {
 	{
 		try {
 			data = new HashMap<>();
-		data.put("name", "AMK41");
+		data.put("name", "AMK4156");
 		data.put("job", "SDET");
 		
 		given()
-		.baseUri(URL)
 			.contentType("application/json")
 			.body(data)
 		.when()
-			.put("/posts/1/")
+			.put(URL+"/"+userid)
 		.then()
 			.statusCode(200)
-			.body("name", equalTo("AMK41"))
+			.body("name", equalTo("AMK4156"))
 			.body("job", equalTo("SDET"))
 		.log().all();
+		System.out.println("update request is successfull");
 		}
 		catch(Exception e) {
 			Assert.fail("testcase failed: "+e.getMessage());
@@ -96,44 +98,25 @@ public class Requests {
 
 	//delete request
 	
-	@Test(priority=4, enabled=true)
+	@Test(priority=4, enabled=true, dependsOnMethods="updateRequest")
 	public void deleteRequest()
 	{
 	    try {
 	       
 	        given()
 	        .when()
-	            .delete(URL+"/posts/"+userid)
+	            .delete(URL+"/"+37)
 	        .then()
 	            .statusCode(204)   // correct for JSONPlaceholder
 	            .time(lessThan(2000L))
 	            .body(emptyOrNullString())
 	            .log().all()
 	            .log().body();
-	        
+	        System.out.println("delete request is successfull");
 	    }
 	    catch(Exception e) {
 	        Assert.fail("testcase failed: "+e.getMessage());
 	    }
-	}
-	
-	@Test(priority=5, enabled=true)
-	public void getRequest2()
-	{
-		try {
-		given()
-		.when()
-			.get(URL+"/posts/1/"+userid)
-		.then()
-			.statusCode(200)
-//			.body(containsString("title"))
-			.header("content-type", equalTo("application/json; charset=utf-8"))
-			.time(lessThan(2000L))
-		.log().all();
-		}
-		catch (Exception e) {
-				Assert.fail("testcases failed: "+ e.getMessage());
-		}
 	}
 
 }
